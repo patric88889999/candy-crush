@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <title>Kueh Pop!</title>
 <meta name="description" content="Kueh Pop! A match-3 game with Singapore kueh. Pop as many as you can in 60 seconds.">
-<meta name="theme-color" content="#17867a">
+<meta name="theme-color" content="#f06a9b">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="/icons/favicon-48.png">
@@ -23,8 +23,8 @@
    COLOUR and TYPE: jade tile ground, nyonya pink rim, gold accent; Baloo 2
    LAYOUT: thumb-first column — score + timer, square tray, buttons at the bottom */
 :root{color-scheme:light dark;
- --bg:light-dark(#17867a,#0b2f2c);--bg2:light-dark(#0f6b61,#123f3a);
- --ink:#fffdf6;--tray:light-dark(#fff1d6,#1c4a45);--rim:light-dark(#f48fb1,#c2507f);
+ --bg:light-dark(#f06a9b,#6e1a3f);--bg2:light-dark(#d94a80,#561431);
+ --ink:#fffdf6;--tray:light-dark(#fff1d6,#1c4a45);--rim:light-dark(#17867a,#1d9a8c);
  --gold:#ffd23f;--pink:#ff5d8f;--pinkd:#b0205a;
  --card:light-dark(#fffaf0,#14302d);--cardink:light-dark(#3a1f2b,#f6eee6);--muted:light-dark(#7a5a66,#b9cfc9)}
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
@@ -33,33 +33,33 @@ html,body{height:100%}
 body{margin:0;color:var(--ink);font:16px/1.4 "Baloo 2",ui-rounded,system-ui,sans-serif;overflow:hidden;
  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;overscroll-behavior:none;touch-action:manipulation;
  background:
-  radial-gradient(circle at 50% 50%,rgba(255,210,63,.22) 0 5px,transparent 6px),
-  radial-gradient(circle at 0 0,rgba(255,93,143,.2) 0 13px,transparent 14px),
-  radial-gradient(circle at 100% 0,rgba(255,93,143,.2) 0 13px,transparent 14px),
-  radial-gradient(circle at 0 100%,rgba(255,93,143,.2) 0 13px,transparent 14px),
-  radial-gradient(circle at 100% 100%,rgba(255,93,143,.2) 0 13px,transparent 14px),
+  radial-gradient(circle at 50% 50%,rgba(255,210,63,.45) 0 5px,transparent 6px),
+  radial-gradient(circle at 0 0,rgba(255,255,255,.16) 0 13px,transparent 14px),
+  radial-gradient(circle at 100% 0,rgba(255,255,255,.16) 0 13px,transparent 14px),
+  radial-gradient(circle at 0 100%,rgba(255,255,255,.16) 0 13px,transparent 14px),
+  radial-gradient(circle at 100% 100%,rgba(255,255,255,.16) 0 13px,transparent 14px),
   var(--bg);background-size:56px 56px}
 .app{height:100vh;height:100dvh;max-width:620px;margin:0 auto;display:flex;flex-direction:column;gap:8px;
  padding:max(10px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) max(10px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left))}
 header{display:flex;align-items:center;gap:10px}
 h1{margin:0;font-size:clamp(28px,8vw,40px);line-height:1;font-weight:800;text-shadow:0 3px 0 var(--pinkd);flex:1;white-space:nowrap}
-.chip{background:rgba(0,0,0,.22);border-radius:14px;padding:4px 12px;text-align:center;min-width:76px}
+.chip{background:rgba(110,10,50,.28);border-radius:14px;padding:4px 12px;text-align:center;min-width:76px}
 .chip small{display:block;font-size:13px;opacity:.85;line-height:1.1}
 .chip b{font-size:22px;line-height:1.1;font-variant-numeric:tabular-nums}
-.timer{position:relative;height:26px;border-radius:99px;background:rgba(0,0,0,.28);overflow:hidden}
+.timer{position:relative;height:26px;border-radius:99px;background:rgba(110,10,50,.32);overflow:hidden}
 #bar{height:100%;width:100%;border-radius:99px;background:linear-gradient(90deg,var(--gold),#7ee07a)}
 .timer span{position:absolute;inset:0;display:grid;place-items:center;font-weight:800;font-size:17px;text-shadow:0 1px 2px rgba(0,0,0,.5)}
-.timer.hurry #bar{background:linear-gradient(90deg,var(--pink),#ff9f6b);animation:pulse .5s ease-in-out infinite alternate}
+.timer.hurry #bar{background:linear-gradient(90deg,#e8361f,#ffb04a);animation:pulse .5s ease-in-out infinite alternate}
 @keyframes pulse{to{opacity:.6}}
 #wrap{flex:1;min-height:0;display:grid;place-items:center;padding:9px}
 canvas#board{display:block;border-radius:18px;background:var(--tray);touch-action:none;
  box-shadow:0 0 0 7px var(--rim),0 0 0 10px rgba(255,255,255,.25),0 14px 30px rgba(0,0,0,.35)}
 .bottom{display:flex;align-items:center;gap:10px}
 .bottom p{flex:1;margin:0;font-size:14px;opacity:.9;line-height:1.2}
-.ib{width:48px;height:48px;border-radius:50%;border:0;background:rgba(0,0,0,.25);color:#fff;display:grid;place-items:center;cursor:pointer}
+.ib{width:48px;height:48px;border-radius:50%;border:0;background:rgba(110,10,50,.3);color:#fff;display:grid;place-items:center;cursor:pointer}
 .ib svg{width:24px;height:24px}
 .ib:focus-visible,.btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
-.ov{position:fixed;inset:0;display:grid;place-items:center;background:rgba(6,36,32,.55);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);z-index:5;padding:16px}
+.ov{position:fixed;inset:0;display:grid;place-items:center;background:rgba(90,10,45,.5);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);z-index:5;padding:16px}
 .ov[hidden]{display:none}
 .card{width:100%;max-width:420px;max-height:92dvh;overflow:auto;background:var(--card);color:var(--cardink);border-radius:26px;padding:22px 20px;text-align:center;
  box-shadow:0 0 0 6px var(--rim),0 20px 50px rgba(0,0,0,.4)}

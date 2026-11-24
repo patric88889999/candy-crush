@@ -1,6 +1,6 @@
 // Kueh Pop! service worker: makes the game load instantly and work offline.
 // Bump VERSION whenever you change index.html or the icons, so phones pick up the update.
-const VERSION = 'kueh-pop-v1';
+const VERSION = 'kueh-pop-v2';
 const FONTS = 'kueh-pop-fonts';
 const CORE = [
   '/',
