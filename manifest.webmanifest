@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "Kueh Pop!",
+  "short_name": "Kueh Pop",
+  "description": "A match-3 game with Singapore kueh. Pop as many as you can in 60 seconds.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#17867a",
+  "theme_color": "#17867a",
+  "lang": "en-SG",
+  "categories": ["games", "kids", "entertainment"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
